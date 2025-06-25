@@ -7,24 +7,6 @@ The system is built in two main stages:
 1.  **Audio Generation**: Scripts that use Google Text-to-Speech (gTTS) to generate `.wav` audio files for numbers and specific words (e.g., "hundred," "thousand") in Gujarati.
 2.  **Audio Playback**: Application logic that takes a number, decomposes it into a sequence of playable parts, and then plays the corresponding audio files. This is provided as a command-line script and a Flask-based web API.
 
-## Project Structure
-
-```
-
-MultiLangVoice/
-│
-├── api.py                  \# Flask API for web-based announcements.
-├── call.py                 \# Command-line script for local announcements.
-├── number.py               \# Core logic for number decomposition and playback.
-│
-├── generateAudios/
-│   ├── numbers.py          \# Generates audio for numbers 1-99.
-│   └── words.py            \# Generates audio for round numbers (100, 1000, etc.).
-│
-└── audio/                    \# (Generated) Directory where .wav files are stored.
-
-````
-
 ## Prerequisites
 
 - Python 3.x
@@ -32,7 +14,6 @@ MultiLangVoice/
 - `playsound`
 - `gTTS`
 - `pydub`
-- **FFmpeg**: `pydub` requires FFmpeg for audio processing. Download and install it from the [official FFmpeg website](https://ffmpeg.org/download.html) and ensure it's available in your system's PATH.
 
 ## Installation
 
